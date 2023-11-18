@@ -36,6 +36,12 @@ def accept_offer(offer_id: int) -> None:
                 WHERE id = {offer_id}""")
     con.commit()
 
+def get_spec_offers(category_id: int) -> list:
+    """Возвращает список заявок по конкретной категории."""
+    result = cur.execute(f"""SELECT * FROM apps
+                         WHERE serviceID = {category_id}""").fetchall()
+    return result
+
 def main():
     #tests
     print('Done!')
