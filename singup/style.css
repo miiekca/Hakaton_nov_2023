@@ -1,0 +1,146 @@
+@font-face {
+	font-family: 'OCRA'; 
+	src: url(ocra.ttf); 
+}
+
+body{
+	margin: 0 ;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.bck{
+	background: #F5F5F5;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.reg-win{
+	height: 100%;
+	background: #F7EE70;
+	width: 25%;
+	height: 90vh;
+	margin-left: 12%;
+	text-align: center;
+
+	padding-top: 5%;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-bottom: 0%;
+}
+
+.text{
+	font-family: 'OCRA';
+	font-size: 29px;
+	margin-bottom: 30%;
+}
+
+.phone-line{
+	font-family: 'OCRA';
+	margin-top:	0%;
+	background: rgba(0,0,0,0);
+	border: none;
+	border-bottom: 2px solid #000;
+	width: 65%;
+	font-size: 16px;
+	margin-bottom: 10%;
+}
+
+.pass-line{
+	font-family: 'OCRA';
+	margin-top:	0%;
+	background: rgba(0,0,0,0);
+	border: none;
+	border-bottom: 2px solid #000;
+	width: 65%;
+	font-size: 16px;
+	margin-bottom: 10%;
+}
+
+.btns{
+	margin-top: 7%;
+}
+
+.btn-reg{
+	font-family: 'OCRA';
+	font-size: 100%;
+	width: 30%;
+	text-decoration: none;
+	color: #000;
+	padding: 4% 4%;
+	background: #FFB82E;
+}
+
+.to-singin{
+	margin-top: 15%;
+}
+
+.btn-singin{
+	font-family: 'OCRA';
+	padding: 2% 8%;
+	background: #C995E5;
+	text-decoration: none;
+	color: #000;
+}
+
+.container {
+	width: 50%;
+	height: 100%;
+	text-align: right;
+	margin-top: 4%;
+	font-family: 'OCRA';
+	margin-right: 2%;
+}
+
+.line-1{
+	margin-left: 20%;
+	display: flex;
+	font-family: 'OCRA';
+	font-size: 32px;
+	justify-content: right;
+}
+
+.text-2{
+	display: flex;
+}
+
+.text-purple{
+	color: #C250FF;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.line-2{
+	margin-top: 8%;
+	margin-left: 15%;
+	display: flex;
+	font-size: 20px;
+	justify-content: right;
+}
+
+.text-orange{
+	margin: 0% 1.5%;
+	color: #EE8F00;
+}
+
+.line-3{
+	margin-left: 15%;
+	font-size: 20px;
+	justify-content: right;
+}
+
+.line-4{
+	justify-content: right;
+	margin-top: 8%;
+	display: flex;
+	font-size: 20px;
+}
+
+.line-5{
+	font-size: 20px;
+}
+
+.foximg{
+	margin-right: 10%;
+}
