@@ -3,6 +3,7 @@
 	src: url(ocra.ttf); 
 }
 body{
+	margin: 0px;
 }
 
 .header{
@@ -109,23 +110,28 @@ body{
 }
 
 .items-pages{
+	margin-top: 2.5%;
 	margin-left: 15%;
-	display: table;
-
+	display: ;
+	width: 10%;
 }
 
 .title-page{
 	color: #AAAAAA;
+	margin-bottom: 15%;
+}
+
+.for_marg{
+	margin-bottom: 15%;
 }
 
 .btn-bottom{
 	color: #fff;
 	text-decoration: none;
-	margin-bottom: 5%;
 }
 
 .contacts{
 	color: #AAAAAA;
 	margin-left: 45%;
-	margin-top: 1%;
+	margin-top: 3%;
 }

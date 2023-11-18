@@ -1,0 +1,132 @@
+@font-face {
+	font-family: 'OCRA'; 
+	src: url(ocra.ttf); 
+}
+body{
+	margin: 0px;
+}
+
+.nav{
+	margin-left: 0%;
+	font-family: 'OCRA';
+	display: flex;
+	margin-right: 0%;
+	background: #F5F5F5;
+	padding: 1%;
+	position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+
+}
+
+.name{
+	font-family: 'OCRA';
+	font-size: 28px;
+	color: #C250FF;
+	margin-left: 10%;
+	margin-right: 5%;
+}
+
+.btn{
+	text-decoration: none;
+	color: #000;
+	margin-top: 8%;
+}
+
+.btn-order {
+	text-align: center;
+	width: 20%;
+	height: 50%;
+	color: #000;
+	text-decoration: none;
+	margin:  0 auto;
+	margin-top: 1.5%;
+	background: #FFE500;
+	padding: 1% 0%;
+}
+
+.items-sing{
+	display: flex;
+	margin-right: 25%;
+	margin-top: 1.5%;
+}
+
+.notif{
+	margin-top: 2%;
+	margin-right: 40%;
+}
+
+.my-profile{
+	margin: 10% 30%;
+	font-family: 'OCRA';
+}
+
+.header-profile{
+	font-size: 22px;
+}
+
+.profile-info{
+	display: flex;
+}
+
+.photo{
+	margin-top: 2%;
+	background: #F5F5F5;
+	width: 24%;
+}
+
+.line{
+	margin-left: 10%;
+	border-bottom: 2px solid #000;
+	height: 15%;
+	margin-top: 5%;
+	width: 190%;
+}
+
+.bottom-field{
+	margin-top: 30%;
+	width: 100%;
+	background: #2C2C2C;
+	padding-bottom: 5%;
+}
+
+.header-bottom{
+	display: flex;
+}
+
+.items-pages{
+	margin-top: 2.5%;
+	margin-left: 15%;
+	display: ;
+	width: 10%;
+}
+
+.title-page{
+	color: #AAAAAA;
+	margin-bottom: 15%;
+}
+
+.for_marg{
+	margin-bottom: 15%;
+}
+
+.btn-bottom{
+	color: #fff;
+	text-decoration: none;
+}
+
+.contacts{
+	color: #AAAAAA;
+	margin-left: 45%;
+	margin-top: 3%;
+}
+
+
+.name-1{
+	color: #C250FF;
+	font-family: 'OCRA';
+	font-size: 28px;
+	color: #C250FF;
+	margin-left: 3%;
+	margin-top: 4%;
+}
