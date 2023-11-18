@@ -126,9 +126,53 @@ body{
 }
 
 .list-appl{
-	width: 100%;
-	height: 50%;
-	background: #F5F5F5;
+	display: flex;
+	margin-top: 5%;
+}
+
+.card-now{
+	background: #FCD755;
+	width: 200%;
+}
+
+
+.now{
+	margin-top: 0%;
+}
+
+.header-now{
+	margin-top: 5%;
+	text-align: left;
+	background: #FFAC0C;
+
+}
+
+.ready{
+	margin-left: 37%;
+}
+
+.text-2{
+	font-size: 18px;
+}
+
+.text-3{
+	font-size: 16px;
+}
+
+.line-service{
+	font-size: 14px;
+	margin-left: 2%;
+	border-bottom: 2px solid #000;
+	width: 190%;
+}
+
+.price{
+	font-size: 14px;
+}
+
+#pricecoorant{
+	width: 50%;
+	border-bottom: 2px solid #000;
 }
 
 .bottom-field{
