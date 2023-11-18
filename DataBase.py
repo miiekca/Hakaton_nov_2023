@@ -82,7 +82,31 @@ class Client:
                 request += to_join
             request += ' WHERE '
             request +=  " AND ".join(condition)
-            print(request)
             result = self.cur.execute(request).fetchall()
             return result
         return condition
+    
+    def user_search(self, substr: str) -> list:
+        """Ищем мастеров в таблице users по полю content, пользуясь заданной подстрокой для поиска."""
+        result = self.cur.execute(f"""SELECT * FROM users
+                         WHERE isMaster = 1
+                         AND content LIKE '%{substr}%'""").fetchall()
+        return result
+    
+    def user_filter(self, city: str = None, category_id: int = None) -> list:
+        """Возвращает список карточек мастеров, отфильтрованных в соответствии с условием.
+            Поиск ведем по таблице users."""
+        condition = []
+        if city is not None:
+            condition.append(f'city = "{city}"')
+        if category_id is not None:
+            condition.append(f'm.id_service = "{category_id}"')
+        if condition:
+            request = """SELECT * FROM users u
+                        JOIN masterService m ON m.id_master = u.id
+                        WHERE isMaster = 1 AND """
+            request +=  " AND ".join(condition)
+            result = self.cur.execute(request).fetchall()
+            return result
+        return condition
+                        
