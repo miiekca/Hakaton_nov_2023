@@ -86,7 +86,7 @@ body{
 .profile-info{
 	display: flex;
 	margin-top: 7%;
-	background: #C995E5;
+	background: #FFAA29;
 	padding: 10% 4%;
 	width: 105%;
 	padding-right: 1%;
@@ -131,7 +131,7 @@ body{
 }
 
 .card-now{
-	background: #FCD755;
+	background: #F6BDFF;
 	width: 200%;
 	padding-bottom: 15%;
 }
@@ -150,7 +150,7 @@ body{
 .header-now{
 	margin-top: 5%;
 	text-align: left;
-	background: #FFAC0C;
+	background: #EC7AFF;
 	margin-bottom: 3%;
 }
 
@@ -232,7 +232,7 @@ body{
 
 .area-text{
 	width: 80%;
-	height: 180%;
+	height: 100%;
 	margin-left: 10%;
 	margin-bottom: 2%;
 }
@@ -253,6 +253,14 @@ body{
 	margin-left: 0%;
 	border-bottom: 2px solid #000;
 	margin-right: 8%;
+}
+
+
+.bottom-field{
+	margin-top: 30%;
+	width: 100%;
+	background: #2C2C2C;
+	padding-bottom: 5%;
 }
 
 .header-bottom{
