@@ -2,35 +2,30 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel = "stylesheet" href = "static/style_profile.css">
+		<link rel = "stylesheet" href = "static/style_profil_master.css">
 		<title>Заказики</title>
 
 	</head>
 	<body>
 		<div class = "nav">
-			<a class = "name" href = "main_singin.html">Заказики</p>
-
-			<a class = "btn-order" href = "/masterMode">Режим мастера</a>
-			<a class = "btn-order" href = "/addApp">Подать заявку</a>
-
+			<p class = "name">Заказики</p>
+			
+			<a class = "btn-order" href = "app.html">Подать заявку</a>
 			
 			<div class = "items-sing">
-				 <a class = "notif" href = "notification.html">
+				 <a class = "notif" href = "notification">
 				 	<img src = "static/notific.png">
 				 </a>
-				<a class = "items-2" href = "main_singin.html">
+				<a class = ""href = "main_singin.html">
 					<img src = "static/face.png">
 				 </a>
 			</div>
 		</div>
-
  <form method="post"></form>
 		<div class = "my-profile">
 			<div class = "header-profile">
 				<div class = "text-header">Профиль</div>
-				<div class = "became-master">
-					<a class = "btn-master" href = "/becomeMaster">Хочу стать мастером!</a>
-				</div>
+
 			</div>
 			<div class = "profile-info">
 				<div class = "info">
@@ -50,7 +45,7 @@
 		</div>
 	</div>
 
-	<div class = "my-appl">
+		<div class = "my-appl">
 		<div class = "header-app">Ваши заявки:</div>
 			<div class = "list-appl">
 				<div class = "now">
@@ -60,7 +55,7 @@
 							<label class = "text-3">Заявка №</label>
 						</div>
 						<div class = "go-profile">
-							<a class = "link-to-profile" href = "#">Username</a>
+							<a class = "link-to-profile" href = "#" name = "username_now">Username</a>
 						</div>
 						<div class = "line-service" readonly name = "service">Услуга</div><br>
 						<div class = "line-service" readonly name = "region">Район города</div>
@@ -79,13 +74,13 @@
 					
 				</div>
 				<div class = "ready">
-					<div class = text-5>Ожидают мастера:</div>
+					<div class = text-5>Ожидают ответа:</div>
 					<div class = "card-ready">
 						<div class = "header-ready">
 							<label class = "text-3">Заявка №</label>
 						</div>
 						<div class = "go-profile">
-							<a class = "link-to-profile" href = "#">Username</a>
+							<a class = "link-to-profile" href = "#" name = "username_ready">Username</a>
 						</div>
 						<div class = "line-service" readonly name = "service">Услуга</div><br>
 						<div class = "line-service" readonly name = "region">Район города</div>
@@ -101,6 +96,7 @@
 				</div>
 			</div>
 	</div>
+
 
 		<div class = "bottom-field">
 			<div class = "header-bottom">

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href = "./static/style_became_master.css">
+    <link rel = "stylesheet" href = "static/style_became_master.css">
     <title>Application</title>
 </head>
 <body>
@@ -13,10 +13,10 @@
         
         <div class = "items-sing">
              <a class = "notif" href = "#">
-                 <img src = "./static/notific.png">
+                 <img src = "static/notific.png">
              </a>
             <a class = ""href = "profile.html">
-                <img src = "./static/face.png">
+                <img src = "static/face.png">
              </a>
         </div>
     </div>
@@ -27,19 +27,20 @@
     <div class="center">Заполните форму для того, чтобы стать</div>
     <div class="text-orange">мастером</div>
     <div id = "imag">
-        <img src="./static/laptop.png" align="center" height="400">
+        <img src="static/laptop.png" align="center" height="400">
     </div>
 
     <form action="{{ url_for('becomeMaster') }}" method="POST">
         <div class="reg-window">
         <div class = "fields">
+            <select name="sericeID">
+                {% for category in categories %}
+                    <option value="{{ category[0] }}">{{ category[1] }}</option>
+                {% endfor %}
+            </select>
 <!--            <input id = "reg-field" name="service" placeholder = "Категория услуг, в которой вы хотите работать...">-->
-                <select name="serviceID">
-                    {% for category in categories %}
-                        <option value="{{ category[0] }}">{{ category[1] }}</option>
-                    {% endfor %}
-                </select>
-<!--					<input type="submit" value="фильтр">-->
+            <input id = "reg-field" name="psw" type="text" placeholder="Опишите ваши умения в области услуг..">
+            
         </div>
         <div class = "btn-singin">
             <button type="submit" class = "btn-1">Начать работать!</button>

@@ -64,9 +64,7 @@ body{
 }
 
 .my-profile{
-	width: 40%;
-	margin: auto;
-	margin-top: 10%;
+	margin: 10% 30%;
 	font-family: 'OCRA';
 }
 
@@ -83,25 +81,13 @@ body{
 }
 
 
-.btn-master{
-
-	display: flex;
-	background: #FFAA29;
-	padding: 2% 3%;
-	text-decoration: none;
-	width: 100%;
-	margin: auto;
-	color: #000;
-	margin-left: 12%;
-}
-
 .profile-info{
 	display: flex;
-	margin-top: 5%;
-	background: #C995E5;
+	margin-top: 7%;
+	background: #FFAA29;
 	padding: 10% 4%;
 	width: 105%;
-	padding-right: 2%;
+	padding-right: 5%;
 }
 
 .info{
@@ -111,8 +97,8 @@ body{
 
 .about-me{
 	font-family: 'OCRA';
-	height: 100%;
-	width: 125%;
+	height: 140%;
+	width: 100%;
 	resize: none;
 }
 
@@ -124,6 +110,25 @@ body{
 	padding: 2% 2%;
 }
 
+
+.field-about{
+	width: 200%;
+	text-align: center;
+	justify-content: center;
+}
+
+.go-message{
+	text-decoration: none;
+	color: #000;
+	background: #C995E5;
+	margin-bottom: 5%;
+	padding: 2% 3%;
+	width: 120%;
+	font-size: 12px;
+	margin-left: 20%;
+	border-radius: 2px;
+}
+
 .line{
 	margin-left: 10%;
 	border-bottom: 2px solid #000;
@@ -132,108 +137,9 @@ body{
 	width: 190%;
 }
 
-.my-appl{
-	width: 40%;
-	font-family: 'OCRA';
-	margin: auto;
-	margin-top: 10%;
-	font-size: 24px;
-}
-
-.list-appl{
-	display: flex;
+.txarea{
 	margin-top: 5%;
-}
-
-.card-now{
-	background: #FCD755;
-	width: 200%;
-	padding-bottom: 15%;
-}
-
-.card-ready{
-	background: #D5D0E8;
 	width: 130%;
-	padding-bottom: 5%;
-}
-
-
-.now{
-	margin-top: 0%;
-}
-
-.header-now{
-	margin-top: 5%;
-	text-align: left;
-	background: #FFAC0C;
-	margin-bottom: 3%;
-}
-
-.header-ready{
-	margin-top: 5%;
-	text-align: left;
-	background: #B0AACC;
-	margin-bottom: 3%;
-}
-
-.go-profile{
-	margin-top: 2%;
-	margin-left: 2%;
-	border-bottom: 2px solid #000;
-	width: 90%;
-	margin-bottom: 10%;
-}
-
-.link-to-profile{
-	text-decoration: none;
-	font-size: 15px;
-	margin-bottom: 1%;
-	color: #000;
-
-}
-
-.ready{
-	margin-top: 1%;
-	margin-left: 35%;
-	font-size: 18px;
-	width: 40%;
-}
-
-.text-2{
-	font-size: 18px;
-}
-
-.text-3{
-	font-size: 16px;
-	margin-left: 2%	;
-}
-
-.text-4{
-	font-size: 14px;
-}
-
-.text-5{
-	margin-bottom: 3%;
-}
-
-.line-service{
-	font-size: 14px;
-	margin-left: 2%;
-	border-bottom: 2px solid #000;
-	width: 90%;
-	margin-top: 0%;
-	height: 50%;
-}
-
-.price{
-	margin-left: 1%;
-	font-size: 14px;
-	margin-top: 50%;
-	display: flex;
-	border-bottom: 2px solid #000;
-	margin: 4% 2%;
-	margin-right: 4%;
-	width: 90%;
 }
 
 
@@ -256,7 +162,6 @@ body{
 	height: 180%;
 	width: 100%;
 	margin: auto;
-	resize: none;
 }
 
 .who-master{

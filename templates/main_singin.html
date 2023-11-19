@@ -8,14 +8,15 @@
 	</head>
 	<body>
 		<div class = "nav">
-			<p class = "name">Заказики</p>
+			<a class = "name" href = "main_singin.html">Заказики</p>
+
 			<a class = "btn-order" href = "/addApp">Подать заявку</a>
 			
 			<div class = "items-sing">
-				<a clas = "notif" href="#"> 
-					<img src="static/notific.png">
-				</a>
-				<a class = "" href = "/profile">
+				 <a class = "notif" href = "notification.html">
+				 	<img src = "static/notific.png">
+				 </a>
+				<a class = "items-2" href = "/profile">
 					<img src = "static/face.png">
 				 </a>
 			</div>
@@ -23,14 +24,14 @@
 
 		<div class = "text">
 			<p>{{ userInfo }}</p>
-			<p>Найди заказ какой-то хуй знает какой, я тут просто<br> от балды пишу, чтобы меня похвалили</p>
+			<p>Найди заказ какой-то знает какой, я тут просто<br> от балды пишу, чтобы меня похвалили</p>
 		</div> 
 		<div class = "container-1">
 			<div class = "search-block">
 				<form action="{{ url_for('clientSearchFilter') }}" method="POST">
 					<input name="sub" id = "field" class = "search-line" placeholder="Услуга или специалист">
 <!--					<a class = "go-search" href = "#">Найти</a>-->
-					<input type="submit" value="Найти">
+					<input class="go-search" type="submit" value="Найти">
 				</form>
 
 	<script type="text/javascript">
@@ -39,14 +40,16 @@
 	}
 	</script>
 		<br>
-				<form action="{{ url_for('clientFilter') }}" method="POST">
-					<select name="serviceID">
-						{% for category in categories %}
-							<option value="{{ category[0] }}">{{ category[1] }}</option>
-						{% endfor %}
-					</select>
-					<input type="submit" value="фильтр">
-				</form>
+				<div class="filter">
+						<form action="{{ url_for('clientFilter') }}" method="POST">
+							<select name="serviceID">
+								{% for category in categories %}
+									<option value="{{ category[0] }}">{{ category[1] }}</option>
+								{% endfor %}
+							</select>
+							<input class="go-search_fil" type="submit" value="фильтр">
+						</form>
+				</div>
 
 
 <!--		<div class="dropdown">-->
@@ -102,7 +105,7 @@
 			<div class = "card">
 				<div class = "masters-info">
 					<div class = "photo">
-						<img src = "static/default_photo.png" height="140">
+						<img src = "static/default_photo.png" height="120">
 					</div>
 					<div class = "masters-lines">
 						<div class = "line" name = "Username">				{{ master[1] }}</div>

@@ -4,9 +4,7 @@
 }
 
 body{
-	margin: 0 ;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin: 0px;
 }
 
 .bck{
@@ -21,7 +19,7 @@ body{
 	background: #F7EE70;
 	width: 25%;
 	height: 90vh;
-	margin-left: 12%;
+	margin-left: 8%;
 	text-align: center;
 
 	padding-top: 5%;
@@ -47,6 +45,7 @@ body{
 	margin-bottom: 10%;
 }
 
+
 .pass-line{
 	font-family: 'OCRA';
 	margin-top:	0%;
@@ -65,7 +64,7 @@ body{
 .btn-reg{
 	font-family: 'OCRA';
 	font-size: 100%;
-	width: 30%;
+	width: 60%;
 	text-decoration: none;
 	color: #000;
 	padding: 4% 4%;
@@ -90,7 +89,7 @@ body{
 	text-align: right;
 	margin-top: 4%;
 	font-family: 'OCRA';
-	margin-right: 2%;
+	margin-right: 8%;
 }
 
 .line-1{

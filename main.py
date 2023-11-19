@@ -27,6 +27,7 @@ def home():
     return render_template('main_singin.html', masters=masters, userInfo=userInfo, categories=category)
 
 
+# сделан
 @app.route('/profile')
 def profile():
     if 'user_id' not in session:
@@ -36,6 +37,7 @@ def profile():
     return render_template('profile.html', userData=data)
 
 
+# сделан
 @app.route('/becomeMaster', methods=["POST", "GET"])
 def becomeMaster():
     services = gt.getAllServices()
@@ -45,10 +47,8 @@ def becomeMaster():
             # return render_template("became_master.html", categories=services)
             return redirect(url_for('masterMode'))
         else:
-            return redirect(url_for("/signup"))
+            return redirect(url_for("signup"))
     return render_template("became_master.html", categories=services)
-
-    # return 'become master'
 
 
 # выводим список заявок из категорий, которые принадлежат данному мастеру
@@ -104,8 +104,10 @@ def masterSearchFilter():
     availableServices = gt.getServicesFromMasterID(session['user_id'])
     client = Client2("mainBase.sqlite")
     data = client.master_search(request.form.get('sub'))
-    # print(data)
+    print(data)
     # print(availableServices)
+    if data is None:
+        return redirect(url_for('masterMode'))
 
     return render_template('main_singin_masterMode.html', appList=data, availableServices=availableServices)
 
