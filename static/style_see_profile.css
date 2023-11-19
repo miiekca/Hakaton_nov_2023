@@ -19,98 +19,6 @@ body{
 
 }
 
-#imag{
-	text-align: center;
-}
-
-#reg-field{
-	font-family: 'OCRA';
-	border: none;
-	border-bottom: 2px solid #383838;
-	background: rgba(0,0,0,0);
-	margin-bottom: 1%;
-	padding: 2% ;
-	font-size: 16px;
-	width: 100%;
-    color: #775280;
-
-}
-
-#reg-field-1{
-	font-family: 'OCRA';
-	border: none;
-	border-bottom: 2px solid #383838;
-	background: rgba(0,0,0,0);
-	margin-bottom: 0%;
-	padding: 2% ;
-	font-size: 16px;
-	width: 30%;
-    color: #775280;
-    margin-left: 5%;
-
-}
-
-.btn-1{
-
-	text-decoration: none;
-	background: #FFE500;
-	padding: 4% 8%;
-	color: #000;
-	font-size: 20px;
-	font-family: 'OCRA';
-	margin-top: 10%;
-}
-
-.text-inside{
-	display: flex;
-	width: 28%;
-	margin-top: 3%;
-}
-
-#spec-for-rub{
-	margin-top: 2%;
-}
-
-
-.row{
-    vertical-align: bottom;
-    display: flex;
-    width: 100%;
-    margin-left: 0%;
-}
-
-.span {
-    vertical-align: bottom;
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 1%;
-}
-
-.reg-window{
-	font-family: 'OCRA';
-	text-align: center;
-	width: 30%;
-	height: 60%;
-	
-	margin: auto;
-}
-.center{
-    text-align: center;
-    font-family: 'OCRA';
-    font-size: 39px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.text-singin{
-	margin-top: 5%;
-	font-size: 28px;
-}
-.fields{
-	margin-top: 15%;
-}
-
 .name{
 	font-family: 'OCRA';
 	font-size: 28px;
@@ -148,6 +56,61 @@ body{
 	margin-right: 40%;
 }
 
+.my-profile{
+	margin: 10% 30%;
+	font-family: 'OCRA';
+}
+
+.header-profile{
+	font-family: 'OCRA';
+	font-size: 22px;
+	display: flex;
+	width: 100vh;
+	text-align: center;
+}
+
+.text-header{
+	margin-top: 1%;
+}
+
+
+.profile-info{
+	display: flex;
+	margin-top: 7%;
+	background: #C995E5;
+	padding: 10% 4%;
+	width: 105%;
+	padding-right: 1%;
+}
+
+.info{
+	justify-content: center;
+	margin-right: 30%;
+}
+
+.about-me{
+	font-family: 'OCRA';
+	height: 100%;
+	width: 125%;
+}
+
+.photo{
+	margin-top: 2%;
+	background: #F5F5F5;
+	width: 100%;
+	margin-left: 50%;
+	padding: 2% 2%;
+}
+
+.line{
+	margin-left: 10%;
+	border-bottom: 2px solid #000;
+	height: 15%;
+	margin-top: 15%;
+	width: 190%;
+}
+
+
 
 .bottom-field{
 	margin-top: 30%;
@@ -156,6 +119,30 @@ body{
 	padding-bottom: 5%;
 }
 
+.area-text{
+	width: 80%;
+	height: 180%;
+	margin-left: 10%;
+	margin-bottom: 2%;
+}
+
+.text-service{
+	height: 180%;
+	width: 100%;
+	margin: auto;
+}
+
+.who-master{
+	margin-left: 2%;
+}
+
+.master{
+	margin-top: 2%;
+	font-size: 14px;
+	margin-left: 0%;
+	border-bottom: 2px solid #000;
+	margin-right: 8%;
+}
 
 .header-bottom{
 	display: flex;
