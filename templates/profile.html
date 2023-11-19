@@ -10,7 +10,7 @@
 		<div class = "nav">
 			<p class = "name">Заказики</p>
 			
-			<a class = "btn-order" href = "#">Подать заявку</a>
+			<a class = "btn-order" href = "app.html">Подать заявку</a>
 			
 			<div class = "items-sing">
 				 <a class = "notif" href = "#">
@@ -26,7 +26,7 @@
 			<div class = "header-profile">
 				<div class = "text-header">Профиль</div>
 				<div class = "became-master">
-					<a class = "btn-master" href = "#">Хочу стать мастером!</a>
+					<a class = "btn-master" href = "/becomeMaster">Хочу стать мастером!</a>
 				</div>
 			</div>
 			<div class = "profile-info">
@@ -36,22 +36,69 @@
 					</div>
 					<div class = "users-field">
 						<div class = "line">
-							Username0001
+							{{ userData[1] }}
 						</div>
-					<div class = "line">Владивосток</div>
+					<div class = "line">{{ userData[4] }}</div>
 				</div>
 				</div> 
 				<div class = "field_about">
-					<textarea class = "about-me", placeholder="Расскажите немного о себе" rows="12"></textarea>
+					<textarea class = "about-me", placeholder="Расскажите немного о себе" rows="12">
+						{{ userData[5] }}
+					</textarea>
 				</div>
 		</div>
 	</div>
 
 	<div class = "my-appl">
 		<div class = "header-app">Ваши заявки:</div>
-		<div class = "list-appl">
-			
-		</div>
+			<div class = "list-appl">
+				<div class = "now">
+					<label class = "text-2">Выполняются:</label>
+					<div class = "card-now">
+						<div class = "header-now">
+							<label class = "text-3">Заявка №</label>
+						</div>
+						<div class = "go-profile">
+							<a class = "link-to-profile" href = "#">Username</a>
+						</div>
+						<div class = "line-service" readonly name = "service">Услуга</div><br>
+						<div class = "line-service" readonly name = "region">Район города</div>
+							<div class = "price">
+								<div class = "text-4">Цена:</div>
+								<div class = "pricecourant">1000</div>
+							</div>
+							<div class = "area-text">
+								<textarea class = "text-service", readonly></textarea>
+							</div>
+							<div class = "who-master">
+								<div class = "text-4">Мастер:</div>
+								<div class = "master">Mastername</div>
+							</div>
+						</div> 
+					
+				</div>
+				<div class = "ready">
+					<div class = text-5>Ожидают мастера:</div>
+					<div class = "card-ready">
+						<div class = "header-ready">
+							<label class = "text-3">Заявка №</label>
+						</div>
+						<div class = "go-profile">
+							<a class = "link-to-profile" href = "#">Username</a>
+						</div>
+						<div class = "line-service" readonly name = "service">Услуга</div><br>
+						<div class = "line-service" readonly name = "region">Район города</div>
+							<div class = "price">
+								<div class = "text-4">Цена:</div>
+								<div class = "pricecourant">1000</div>
+							</div>
+							<div class = "area-text">
+								<textarea class = "text-service", readonly></textarea>
+							</div>
+
+					</div>
+				</div>
+			</div>
 	</div>
 
 		<div class = "bottom-field">

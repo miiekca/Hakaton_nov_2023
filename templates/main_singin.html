@@ -9,13 +9,13 @@
 	<body>
 		<div class = "nav">
 			<p class = "name">Заказики</p>
-			<a class = "btn-order" href = "#">Подать заявку</a>
+			<a class = "btn-order" href = "/addApp">Подать заявку</a>
 			
 			<div class = "items-sing">
 				<a clas = "notif" href="#"> 
 					<img src="static/notific.png">
 				</a>
-				<a class = ""href = "profile.html">
+				<a class = "" href = "/profile">
 					<img src = "static/face.png">
 				 </a>
 			</div>
@@ -30,7 +30,7 @@
 				<form action="{{ url_for('clientSearchFilter') }}" method="POST">
 					<input name="sub" id = "field" class = "search-line" placeholder="Услуга или специалист">
 <!--					<a class = "go-search" href = "#">Найти</a>-->
-					<input class="go-search" type="submit" value="Найти">
+					<input type="submit" value="Найти">
 				</form>
 
 	<script type="text/javascript">
@@ -39,16 +39,14 @@
 	}
 	</script>
 		<br>
-				<div class="filter">
-						<form action="{{ url_for('clientFilter') }}" method="POST">
-							<select name="serviceID">
-								{% for category in categories %}
-									<option value="{{ category[0] }}">{{ category[1] }}</option>
-								{% endfor %}
-							</select>
-							<input class="go-search_fil" type="submit" value="фильтр">
-						</form>
-				</div>
+				<form action="{{ url_for('clientFilter') }}" method="POST">
+					<select name="serviceID">
+						{% for category in categories %}
+							<option value="{{ category[0] }}">{{ category[1] }}</option>
+						{% endfor %}
+					</select>
+					<input type="submit" value="фильтр">
+				</form>
 
 
 <!--		<div class="dropdown">-->

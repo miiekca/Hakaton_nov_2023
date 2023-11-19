@@ -27,40 +27,69 @@ def home():
     return render_template('main_singin.html', masters=masters, userInfo=userInfo, categories=category)
 
 
+@app.route('/profile')
+def profile():
+    if 'user_id' not in session:
+        return redirect(url_for('signup'))
+    data = gt.getUser(session['user_id'])
+    print(data)
+    return render_template('profile.html', userData=data)
+
+
+@app.route('/becomeMaster', methods=["POST", "GET"])
+def becomeMaster():
+    services = gt.getAllServices()
+    if request.method == 'POST':
+        if 'user_id' in session:
+            gt.addMaster(session["user_id"], request.form.get('serviceID'))
+            # return render_template("became_master.html", categories=services)
+            return redirect(url_for('masterMode'))
+        else:
+            return redirect(url_for("/signup"))
+    return render_template("became_master.html", categories=services)
+
+    # return 'become master'
+
+
 # выводим список заявок из категорий, которые принадлежат данному мастеру
 @app.route('/masterMode')
 def masterMode():
-    # вернуть позднее
-    # if 'user_id' not in session:
-    #     return redirect(url_for('signin'))
+    if 'user_id' not in session:
+        return redirect(url_for('signin'))
 
-    # if gt.checkMaster(session['user_id']):
-    #     ## вернуть все категории данного мастера
-    #     categories = gt.getAllCategoriesFromId(session['user_id'])
-    #     ## список заявок по категориям (список списков)
-    #     appList = [hf.get_spec_offers(el) for el in categories]
-    #     return render_template('apps.html', content=appList)
-    # else:
-    #     # здесь редирект на мастер-регистрацию
-    #     return 'not content'
+    if gt.checkMaster(session['user_id']):
+        ## вернуть все категории данного мастера
+        availableServices = gt.getServicesFromMasterID(session['user_id'])
+        categories = gt.getAllCategoriesFromId(session['user_id'])
+        ## список заявок по категориям (список списков)
+        appList = [hf.get_spec_offers(el) for el in categories]
+        appList1 = []
+        for l1 in appList:
+            for tup in l1:
+                appList1.append(tup)
+        return render_template('main_singin_masterMode.html', appList=appList1, availableServices=availableServices)
+        # return render_template('apps.html', content=appList)
+    else:
+        # здесь редирект на мастер-регистрацию
+        return 'redirect master signup'
 
-    # вернуть юзер id
-    # categories = gt.getAllCategoriesFromId(session['user_id'])
-
-    availableServices = gt.getServicesFromMasterID(4)
-    # print(availableServices)
-
-    categories = gt.getAllCategoriesFromId(4)
-    # print(categories)
-    appList = [hf.get_spec_offers(el) for el in categories]
-    appList1 = []
-    for l1 in appList:
-        for tup in l1:
-            appList1.append(tup)
-
-    # print(appList)
-    # print(appList1)
-    return render_template('main_singin_masterMode.html', appList=appList1, availableServices=availableServices)
+    # # вернуть юзер id
+    # # categories = gt.getAllCategoriesFromId(session['user_id'])
+    #
+    # availableServices = gt.getServicesFromMasterID(4)
+    # # print(availableServices)
+    #
+    # categories = gt.getAllCategoriesFromId(4)
+    # # print(categories)
+    # appList = [hf.get_spec_offers(el) for el in categories]
+    # appList1 = []
+    # for l1 in appList:
+    #     for tup in l1:
+    #         appList1.append(tup)
+    #
+    # # print(appList)
+    # # print(appList1)
+    # return render_template('main_singin_masterMode.html', appList=appList1, availableServices=availableServices)
 
 
 # Страница заявки (готово) переделать под страницу профиля!!!
@@ -72,13 +101,19 @@ def appUnit():
 
 @app.route('/masterSearchFilter', methods=["POST"])
 def masterSearchFilter():
-    return 'в разработке'
+    availableServices = gt.getServicesFromMasterID(session['user_id'])
+    client = Client2("mainBase.sqlite")
+    data = client.master_search(request.form.get('sub'))
+    # print(data)
+    # print(availableServices)
+
+    return render_template('main_singin_masterMode.html', appList=data, availableServices=availableServices)
 
 
 # Страница списка заявок с приминением фильтра (готово) (возможно работает правильно)
 @app.route('/masterFilter', methods=["POST"])
 def masterFilter():
-    availableServices = gt.getServicesFromMasterID(4)
+    availableServices = gt.getServicesFromMasterID(session['user_id'])
 
     client = Client("mainBase.sqlite")
     data = client.complex_filter(request.form.get('area'), request.form.get('city'),
@@ -88,7 +123,7 @@ def masterFilter():
     # if data is None:
     #     return redirect(url_for('masterMode'))
     # print(len(data))
-    print(data)
+    # print(data)
     return render_template('main_singin_masterMode.html', appList=data, availableServices=availableServices)
     # return 'в разработке'
 
@@ -104,7 +139,7 @@ def clientSearchFilter():
     else:
         userInfo = gt.getUserInfo(session['user_id'])[0][1]
     category = gt.getAllCategory()
-    print(data)
+    # print(data)
     return render_template('main_singin.html', masters=data, userInfo=userInfo, categories=category)
 
 
@@ -129,13 +164,29 @@ def clientFilter():
 @app.route('/addApp', methods=["POST", "GET"])
 def addApp():
     if request.method == 'GET':
-        return render_template('addApp.html')
+        return render_template('app.html')
     elif request.method == 'POST':
-        serviceID = request.form.get('serviceID')
-        content = request.form.get('content')
-        area = request.form.get('are')
-        priceFrom = request.form.get('priceFrom')
-        priceTo = request.form.get('priceTo')
+        # serviceID = request.form.get('serviceID')
+        # content = request.form.get('content')
+        # area = request.form.get('are')
+        # priceFrom = request.form.get('priceFrom')
+        # priceTo = request.form.get('priceTo')
+        if 'user_id' in session:
+            try:
+                print(session["user_id"], request.form.get('service'), request.form.get('content'),
+                      request.form.get('area'), int(request.form.get('priceFrom')), int(request.form.get('priceTo')))
+                gt.addApp(session["user_id"], request.form.get('service'), request.form.get('content'),
+                          request.form.get('area'), int(request.form.get('priceFrom')),
+                          int(request.form.get('priceTo')))
+            except Exception as e:
+                print(e)
+                print('пользователь ввел неправильно прайс')
+                return render_template("app.html")
+        else:
+            return redirect(url_for("signup"))
+
+        return redirect(url_for('home'))
+
         # передаем все аргументы в функцию валидации
 
         # при успешной валидации

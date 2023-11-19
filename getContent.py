@@ -50,7 +50,7 @@ def getUser(id):
 
     cur = con.cursor()
     result = cur.execute(f"""SELECT * FROM users WHERE id={id}""").fetchall()
-    return result
+    return result[0]
 
 
 def checkMaster(id):
@@ -121,6 +121,42 @@ def getServicesFromMasterID(id):
                 JOIN masterService ON services.id = masterService.id_service
                 WHERE masterService.id_master={id}""")
     return cur.fetchall()
+
+
+def addApp(user_id, service, content, area, priceFrom, priceTo):
+    con = sqlite3.connect("mainBase.sqlite")
+    cur = con.cursor()
+    # catys = cur.execute(f"SELECT content FROM services").fetchall()
+    # print(catys)
+    if service:
+        temp = cur.execute(f"SELECT id FROM services WHERE content = '{service}'").fetchall()
+        service_id = temp[0][0]
+        print(temp)
+        print(service_id)
+        # print(user_id)
+        cur.execute("INSERT INTO apps (userID, serviceID, content, area, priceFrom, priceTo, status) "
+                    "VALUES(?, ?, ?, ?, ?, ?, ?)", (user_id, service_id, content, area, priceFrom, priceTo, 0))
+        con.commit()
+        print('заявка отправлена')
+
+
+def addMaster(id_user, serviceID):
+    con = sqlite3.connect("mainBase.sqlite")
+    cur = con.cursor()
+    cur.execute(f"UPDATE users SET isMaster = 1 WHERE id = {id_user}")
+    con.commit()
+    if serviceID:
+        # temp = cur.execute(f"SELECT id FROM services WHERE content = '{serviceID}'").fetchall()
+        # id_service = temp[0][0]
+        # print(id_user, id_service)
+        cur.execute(f"""INSERT INTO masterService (id_master, id_service) VALUES ('{id_user}', '{serviceID}')""")
+        con.commit()
+
+
+def getAllServices():
+    con = sqlite3.connect("mainBase.sqlite")
+    cur = con.cursor()
+    return cur.execute(f"SELECT * FROM services").fetchall()
 
 
 def getEmpty():

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href = "./static/app.css">
+    <link rel = "stylesheet" href = "./static/style_became_master.css">
     <title>Application</title>
 </head>
 <body>
@@ -24,21 +24,25 @@
         <p class = "text-singin">Заполните форму для того, чтобы опубликовать свой заказ</p>
     </div>
     
-    <div class="center">Заполните форму для того, чтобы опубликовать свой заказ</div>
+    <div class="center">Заполните форму для того, чтобы стать</div>
+    <div class="text-orange">мастером</div>
     <div id = "imag">
-        <img src="./static/maskots.png" align="center" height="400">
+        <img src="./static/laptop.png" align="center" height="400">
     </div>
 
-    <form action="{{ url_for('addApp') }}" method="POST">
+    <form action="{{ url_for('becomeMaster') }}" method="POST">
         <div class="reg-window">
         <div class = "fields">
-            <input id = "reg-field" name="service" placeholder = "Категория услуг...">
-            <input id = "reg-field" name="area" type="text" placeholder="Район, в котором проживаете...">
-            <div class="row"><div class = "text-inside">Цена: от</div><input id = "reg-field-1" name="priceFrom" type="text"><span class="span">до</span><input id = "reg-field-1" name="priceTo" type="text"><div id = "spec-for-rub">руб.</div></div>
-            <input id = "reg-field" name="content" type="textarea" placeholder = "Что вы ожидаете от мастера при выполнении заказа...">
+<!--            <input id = "reg-field" name="service" placeholder = "Категория услуг, в которой вы хотите работать...">-->
+                <select name="serviceID">
+                    {% for category in categories %}
+                        <option value="{{ category[0] }}">{{ category[1] }}</option>
+                    {% endfor %}
+                </select>
+<!--					<input type="submit" value="фильтр">-->
         </div>
         <div class = "btn-singin">
-            <button type="submit" class = "btn-1">0публиковать заказ</button>
+            <button type="submit" class = "btn-1">Начать работать!</button>
         </div>
         </div>
     </form>

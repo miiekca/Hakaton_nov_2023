@@ -4,7 +4,9 @@
 }
 
 body{
-	margin: 0px;
+	margin: 0 ;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .bck{
@@ -19,7 +21,7 @@ body{
 	background: #F7EE70;
 	width: 25%;
 	height: 90vh;
-	margin-left: 8%;
+	margin-left: 12%;
 	text-align: center;
 
 	padding-top: 5%;
@@ -44,7 +46,6 @@ body{
 	font-size: 16px;
 	margin-bottom: 10%;
 }
-
 
 .pass-line{
 	font-family: 'OCRA';
@@ -89,7 +90,7 @@ body{
 	text-align: right;
 	margin-top: 4%;
 	font-family: 'OCRA';
-	margin-right: 8%;
+	margin-right: 2%;
 }
 
 .line-1{

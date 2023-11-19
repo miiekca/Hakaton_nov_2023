@@ -28,7 +28,7 @@ body{
 	border: none;
 	border-bottom: 2px solid #383838;
 	background: rgba(0,0,0,0);
-	margin-bottom: 1%;
+	margin-bottom: 7%;
 	padding: 2% ;
 	font-size: 16px;
 	width: 100%;
@@ -53,12 +53,13 @@ body{
 .btn-1{
 
 	text-decoration: none;
-	background: #FFE500;
+	background: #FFAA29;
 	padding: 4% 8%;
 	color: #000;
 	font-size: 20px;
 	font-family: 'OCRA';
 	margin-top: 10%;
+	border: none;
 }
 
 .text-inside{
@@ -89,18 +90,26 @@ body{
 .reg-window{
 	font-family: 'OCRA';
 	text-align: center;
-	width: 30%;
+	width: 50%;
 	height: 60%;
 	
 	margin: auto;
 }
 .center{
+	margin-top: 10%;
     text-align: center;
     font-family: 'OCRA';
-    font-size: 39px;
-    width: 50%;
+    font-size: 30px;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.text-orange{
+	font-family: 'OCRA';
+	color: #EE8F00;
+	font-size: 39px;
+	text-align: center;
 }
 
 .text-singin{
