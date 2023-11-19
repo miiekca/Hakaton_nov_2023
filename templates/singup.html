@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel = "stylesheet" href = "./static/style_singup.css">
+		<title>Регистрация</title>
+	</head>
+	<body>
+		<div class = "bck">
+				<div class = "reg-win">
+					<p class = "text">Регистрация</p>
+					<form action="{{ url_for('signup') }}" method="POST">
+						<input type="text" class = "phone-line" name = "name" placeholder="Имя">
+						<input type="text" class = "pass-line" name = "phone" placeholder="Введите номер">
+						<input type="password" class = "pass-line" name = "psw" placeholder="Пароль">
+						<div class = "btns">
+							<!-- <input type="submit" placeholder="БОЛЬШАЯ КНОПКА"> -->
+							<button class="btn-reg">Зарегистрироваться</button>
+							
+							<div class = "to-singin">
+								<a class = "btn-singin" href = "/signin">
+									Вход
+								</a>
+							</div>
+						</div>
+					</form>
+					
+				</div>
+				<div class = "container"> 
+					<div class = "line-1">
+						<div class = "text-2"> Привет! Мы -
+						</div>
+						<div class = "text-purple"> Заказики</div>
+					</div>
+					<div class = "line-2">
+						<div>Мы поможем</div>
+						<div class = "text-orange">мастерам</div>
+						<div>своего дела найти место</div>
+					</div>
+					<div class = "line-3">
+						для развития и сотрудничества
+					</div>
+					<div class = "line-4">
+						<div> А</div>
+						<div class = "text-purple">заказчики</div>
+						<div>смогут публиковать заказ и получить</div>
+					</div>
+					<div class = "line-5"> 
+						 от мастера нужную услугу
+					</div>
+					<img class = "foximg"src= "./static/fox.png" height="400">
+				</div>
+		</div>
+	</body>
+</html>

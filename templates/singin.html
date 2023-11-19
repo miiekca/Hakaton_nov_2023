@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel = "stylesheet" href = "./static/style_hello.css">
+		<title>Заказики</title>
+
+	</head>
+	<body>
+		<div class = "header">
+			<div class = "name">
+				Заказики
+			</div>
+			<div class = "header-items">
+				<a href = "#" class = "btn"> Вход </a>
+				<p class = "txt"> / </p>
+				<a href="#" class = "btn"> Регистрация </a>
+			</div>
+		</div>
+		<div class = "reg-window"> 
+			<div class = "text">
+				<p class = "text-singin">Вход</p>
+			</div>
+			<form action="{{ url_for('signin') }}" method="POST">
+				<div class = "fields">
+					<input id = "reg-field" name="phone" placeholder = "Номер телефона">
+					<input id = "reg-field" name="psw" type="password" placeholder="Пароль">
+				</div>
+				<div class = "btn-singin">
+					<button type="submit" class = "btn-1">Войти</button>
+				</div>
+			</form>
+		</div>
+
+		<div class = "bottom-field">
+			<div class = "header-bottom">
+				<div class = "name"> Заказики</div>
+				<div class = "items-pages">
+					<p class = "title-page">Разделы</p>
+					<a class = "btn-bottom" href = "#"> Главная</a><br><br>
+					<a class = "btn-bottom" href = "#">	Новый заказ</a><br><br>
+					<a class = "btn-bottom" href = "#"> Все услуги</a><br><br>
+				</div>
+				<div class = "contacts">
+					Контакты
+				</div>  
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel = "stylesheet" href = "static/style_main_singin.css">
+		<title>Заказики</title>
+
+	</head>
+	<body>
+		<div class = "nav">
+			<p class = "name">Заказики</p>
+			<a class = "btn-order" href = "#">Подать заявку</a>
+			
+			<div class = "items-sing">
+				<a clas = "notif" href="#"> 
+					<img src="static/notific.png">
+				</a>
+				<a class = ""href = "profile.html">
+					<img src = "static/face.png">
+				 </a>
+			</div>
+		</div>
+
+		<div class = "text">
+			<p>{{ userInfo }}</p>
+			<p>Найди заказ какой-то хуй знает какой, я тут просто<br> от балды пишу, чтобы меня похвалили</p>
+		</div> 
+		<div class = "container-1">
+			<div class = "search-block">
+				<form action="{{ url_for('masterSearchFilter') }}" method="POST">
+					<input name="sub" id = "field" class = "search-line" placeholder="Услуга или специалист">
+					<input type="submit" value="Найти">
+				</form>
+
+	<script type="text/javascript">
+	function getText(el){
+	document.getElementById('field').value = el.firstChild.data;
+	}
+	</script>
+		<br>
+				<form action="{{ url_for('masterFilter') }}" method="POST">
+					<select name="serviceID">
+						{% for category in availableServices %}
+							<option value="{{ category[0] }}">{{ category[1] }}</option>
+						{% endfor %}
+					</select>
+					<input type="submit" value="фильтр">
+				</form>
+
+
+<!--		<div class="dropdown">-->
+<!--	 	 <button onclick="myFunction()" class="dropbtn"> Фильтр</button>-->
+<!--	  		<div id="myDropdown" class="dropdown-content">-->
+<!--	    	<input type="text" placeholder="Поиск.." id="myInput" onkeyup="filterFunction()">-->
+<!--				<a href="javascript:void(0)" onclick="getText(this)" id="text">Труповозка</a>-->
+<!--			    <a href="javascript:void(0)" onclick="getText(this)" id="text">Займы до зарплаты</a>-->
+<!--			    <a href="javascript:void(0)" onclick="getText(this)" id="text">Вокал</a>-->
+<!--			    <a href="javascript:void(0)" onclick="getText(this)" id="text">Медицина</a>-->
+<!--			    <a href="javascript:void(0)" onclick="getText(this)" id="text">Психилог</a>-->
+<!--			    <a href="javascript:void(0)" onclick="getText(this)" id="text">Репетитор</a>-->
+<!--			    <a href="#">Матанализ</a>-->
+<!--	 		</div>-->
+<!--		</div>-->
+<!--	</div>-->
+
+
+
+
+<!--<script>-->
+<!--/* Когда пользователь нажимает на кнопку, переключаться раскрывает содержимое */-->
+<!--function myFunction() {-->
+<!--  document.getElementById("myDropdown").classList.toggle("show");-->
+<!--}-->
+
+<!--function filterFunction() {-->
+<!--  var input, filter, ul, li, a, i;-->
+<!--  input = document.getElementById("myInput");-->
+<!--  filter = input.value.toUpperCase();-->
+<!--  div = document.getElementById("myDropdown");-->
+<!--  a = div.getElementsByTagName("a");-->
+<!--  for (i = 0; i < a.length; i++) {-->
+<!--    txtЗначение = a[i].textСодержание || a[i].innerText;-->
+<!--    if (txtЗначение.toUpperCase().indexOf(filter) > -1) {-->
+<!--      a[i].style.display = "";-->
+<!--    } else {-->
+<!--      a[i].style.display = "none";-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+<!--</script>-->
+<!--		</div>-->
+<!--		<ul>-->
+<!--			{% for master in masters %}-->
+<!--				<li>{{ master[1] }}</li>-->
+<!--			{% endfor %}-->
+<!--		</ul>-->
+
+		<div class = "masters-cards">
+			<div class = "text-3">Наши теперь заявки</div>
+			{% for app in appList %}
+			<div class = "card">
+				<div class = "masters-info">
+					<div class = "photo">
+						<img src = "static/default_photo.png" height="140">
+					</div>
+					<div class = "masters-lines">
+						<div class = "line" name = "Username">				{{ app[3] }}</div>
+						<div class = "line" name = "town">
+							{{ app[5] }}</div>
+						<div class = "line" name = "skill">
+							{{ app[9] }}</div>
+					</div>
+				</div>
+				<div class = "about-block">
+					<textarea class = "about-master" readonly>{{ app[3] }}</textarea>
+					<button class = "linking">Связаться с мастером, убрать мастера, тут будет заявка</button>
+				</div>
+			</div>
+			{% endfor %}
+			</div>
+
+
+
+		<div class = "bottom-field">
+			<div class = "header-bottom">
+				<div class = "name-1"> Заказики</div>
+				<div class = "items-pages">
+					<p class = "title-page">Разделы</p>
+					<div class = "for_marg">
+						<a class = "btn-bottom" href = "index.html"> Главная</a>
+					</div>
+					<div class = "for_marg">
+						<a class = "btn-bottom" href = "#">	Новый заказ</a>
+					</div>
+					<div class = "for_marg">
+						<a class = "btn-bottom" href = "#"> Все услуги</a>
+					</div>
+				</div>
+				<div class = "contacts">
+					Контакты
+				</div>  
+			</div>
+		</div>
+	</body>
+</html>
