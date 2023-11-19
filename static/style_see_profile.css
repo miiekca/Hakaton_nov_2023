@@ -24,7 +24,9 @@ body{
 	font-size: 28px;
 	color: #C250FF;
 	margin-left: 10%;
-	margin-right: 5%;
+	margin-right: 0%;
+	margin-top: 1.5%;
+	text-decoration: none;
 }
 
 .btn{
@@ -43,12 +45,17 @@ body{
 	margin-top: 1.5%;
 	background: #FFE500;
 	padding: 1% 0%;
+	margin-right: 25%;
 }
 
 .items-sing{
 	display: flex;
-	margin-right: 25%;
+	margin-right: 10%;
 	margin-top: 1.5%;
+}
+
+.items-2{
+	margin-right: ;
 }
 
 .notif{
@@ -80,7 +87,7 @@ body{
 	background: #C995E5;
 	padding: 10% 4%;
 	width: 105%;
-	padding-right: 1%;
+	padding-right: 5%;
 }
 
 .info{
@@ -90,8 +97,9 @@ body{
 
 .about-me{
 	font-family: 'OCRA';
-	height: 100%;
-	width: 125%;
+	height: 140%;
+	width: 100%;
+	resize: none;
 }
 
 .photo{
@@ -102,12 +110,35 @@ body{
 	padding: 2% 2%;
 }
 
+
+.field-about{
+	width: 200%;
+	text-align: center;
+	justify-content: center;
+}
+
+.go-message{
+	text-decoration: none;
+	color: #000;
+	background: #FFAA29;
+	margin-bottom: 5%;
+	padding: 2% 3%;
+	width: 120%;
+	font-size: 12px;
+	margin-left: 20%;
+}
+
 .line{
 	margin-left: 10%;
 	border-bottom: 2px solid #000;
 	height: 15%;
 	margin-top: 15%;
 	width: 190%;
+}
+
+.txarea{
+	margin-top: 5%;
+	width: 130%;
 }
 
 
