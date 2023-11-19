@@ -19,10 +19,13 @@ body{
 
 }
 
+<<<<<<< HEAD
 #imag{
 	text-align: center;
 }
 
+=======
+>>>>>>> 893287fb96b00e3dceb8c8a3a7a12630f2acd341
 #reg-field{
 	font-family: 'OCRA';
 	border: none;
@@ -36,6 +39,7 @@ body{
 
 }
 
+<<<<<<< HEAD
 #reg-field-1{
 	font-family: 'OCRA';
 	border: none;
@@ -50,6 +54,8 @@ body{
 
 }
 
+=======
+>>>>>>> 893287fb96b00e3dceb8c8a3a7a12630f2acd341
 .btn-1{
 
 	text-decoration: none;
@@ -57,6 +63,7 @@ body{
 	padding: 4% 8%;
 	color: #000;
 	font-size: 20px;
+<<<<<<< HEAD
 	font-family: 'OCRA';
 	margin-top: 10%;
 }
@@ -69,6 +76,8 @@ body{
 
 #spec-for-rub{
 	margin-top: 2%;
+=======
+>>>>>>> 893287fb96b00e3dceb8c8a3a7a12630f2acd341
 }
 
 
@@ -76,14 +85,21 @@ body{
     vertical-align: bottom;
     display: flex;
     width: 100%;
+<<<<<<< HEAD
     margin-left: 0%;
+=======
+>>>>>>> 893287fb96b00e3dceb8c8a3a7a12630f2acd341
 }
 
 .span {
     vertical-align: bottom;
     text-align: center;
+<<<<<<< HEAD
     margin-top: 2%;
     margin-left: 1%;
+=======
+
+>>>>>>> 893287fb96b00e3dceb8c8a3a7a12630f2acd341
 }
 
 .reg-window{
