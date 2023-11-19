@@ -107,12 +107,16 @@ body{
 .masters-cards{
 	font-family: 'OCRA';
 	margin: 10% 30%;
+	
 }
 
 .card{
 	display: flex;
 	background: #FFAA29;
 	padding: 3% 9% ;
+	margin: 10% 10%;
+	width: 100%;
+
 }
 
 .text-3{
@@ -179,7 +183,14 @@ body{
 	background: #2C2C2C;
 	padding-bottom: 5%;
 }
-
+.filter{
+	font-family: 'OCRA';
+	margin-left: 2%;
+	text-decoration: none;
+	font-size: 28px;
+	color: #000;
+	padding: 0.3% 2%;
+}
 .header-bottom{
 	display: flex;
 }
@@ -190,11 +201,45 @@ body{
 	display: ;
 	width: 10%;
 }
-
+.filter form {
+	display: flex; /* использование flexbox для выравнивания элементов формы */
+	align-items: center; /* выравнивание элементов по центру по вертикали */
+	font-family: 'OCRA';
+  }
+.go-search{
+	font-family: 'OCRA';
+	margin-left: 2%;
+	text-decoration: none;
+	font-size: 28px;
+	background: #FFE500;
+	color: #000;
+	padding: 0.3% 2%;
+}
+.go-search_fil{
+	font-family: 'OCRA';
+	margin-left: 2%;
+	text-decoration: none;
+	font-size: 24px;
+	background: #C250FF;
+	color: #000;
+	padding: 0.3% 1%;
+}
+.filter select option {
+	text-decoration: none;
+	padding: 5px; /* внутренний отступ вокруг текста в опции */
+	font-family: 'OCRA';
+	color: #333; /* цвет текста в опции */
+	/* background-color: #C250FF; цвет фона опции */
+  }
 .title-page{
 	color: #AAAAAA;
 	margin-bottom: 15%;
 }
+.filter select {
+	padding: 8px; /* внутренний отступ вокруг текста в списке */
+	margin-right: 10px; /* отступ справа от списка */
+	font-family: 'OCRA';
+  }
 
 .for_marg{
 	margin-bottom: 15%;

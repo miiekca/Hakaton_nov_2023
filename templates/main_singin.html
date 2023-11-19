@@ -30,7 +30,7 @@
 				<form action="{{ url_for('clientSearchFilter') }}" method="POST">
 					<input name="sub" id = "field" class = "search-line" placeholder="Услуга или специалист">
 <!--					<a class = "go-search" href = "#">Найти</a>-->
-					<input type="submit" value="Найти">
+					<input class="go-search" type="submit" value="Найти">
 				</form>
 
 	<script type="text/javascript">
@@ -39,14 +39,16 @@
 	}
 	</script>
 		<br>
-				<form action="{{ url_for('clientFilter') }}" method="POST">
-					<select name="serviceID">
-						{% for category in categories %}
-							<option value="{{ category[0] }}">{{ category[1] }}</option>
-						{% endfor %}
-					</select>
-					<input type="submit" value="фильтр">
-				</form>
+				<div class="filter">
+						<form action="{{ url_for('clientFilter') }}" method="POST">
+							<select name="serviceID">
+								{% for category in categories %}
+									<option value="{{ category[0] }}">{{ category[1] }}</option>
+								{% endfor %}
+							</select>
+							<input class="go-search_fil" type="submit" value="фильтр">
+						</form>
+				</div>
 
 
 <!--		<div class="dropdown">-->
