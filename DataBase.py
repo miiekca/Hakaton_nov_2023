@@ -109,4 +109,17 @@ class Client:
             result = self.cur.execute(request).fetchall()
             return result
         return condition
+
+        def master_search(self, substr: str) -> list | None:
+        """Осуществяет поиск карточек заказов в таблице apps, пользуясь заданной подстрокой."""
+        result = self.cur.execute(f"""SELECT a.id, a.area, u.id, u.fullName, u.city FROM apps a
+                                        JOIN users u ON u.id = a.userID
+                                        JOIN services s ON a.serviceID = s.id
+                                        WHERE a.status = 0 
+                                        AND (a.content LIKE '%{substr}%' OR a.area LIKE '%{substr}%'
+                                        OR u.city LIKE '%{substr}%' OR u.fullName LIKE '%{substr}%'
+                                        OR s.content LIKE '%{substr}%')""").fetchall()
+        if result:
+            return result
+        return None
                         
